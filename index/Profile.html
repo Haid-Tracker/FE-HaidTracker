@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- profil -->
+    <link rel="stylesheet" href="../style/Profil/style.css" />
+    <link rel="stylesheet" href="../style/Profil/responsive.css" />
+    <!-- profil -->
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Haid Tracker</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <header>
+      <div class="navbartop"></div>
+      <nav class="navbar">
+        <div class="logo">
+          <h1>HAID TRACKER</h1>
+          <img
+            src="../img/LandingPage/noto_drop-of-blood.png"
+            alt="Blood drop icon"
+            height="40"
+            width="40"
+          />
+        </div>
+        <div id="drawer">
+          <ul class="nav-links">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Period</a>
+            </li>
+            <li>
+              <a href="#">Prediction</a>
+            </li>
+            <div class="user">
+              <a href="#" class="btn">Login</a>
+              <a href="#" class="btn">Sign In</a>
+              <i class="fas fa-moon theme-toggle"></i>
+            </div>
+          </ul>
+        </div>
+
+        <button
+          id="hamburger"
+          class="menu-button"
+          aria-label="Open Navigation Menu"
+        >
+          <img
+            src="https://img.icons8.com/?size=100&id=17551&format=png&color=000000"
+            alt=""
+            height="20"
+            width="20"
+          />
+        </button>
+      </nav>
+    </header>
+    <!-- navbar -->
+
+    <!-- section 1 -->
+    <section class="main-content">
+      <div class="profile-card">
+        <img
+          alt="Foto profil"
+          class="profile-pic"
+          id="profile-pic"
+          src="https://storage.googleapis.com/a1aa/image/pU6KvCkuQKKPDhfIJV6uZBWHuVHuhpQR6L4NAXkhsQh9TE7JA.jpg"
+        />
+        <div class="name" id="user-name">Hai, Pengguna</div>
+        <i
+          class="fas fa-edit edit-icon"
+          onclick="window.location.href='EditProfile.html'"
+        ></i>
+      </div>
+
+      <div class="container">
+        <div class="input-group">
+          <label for="username">Nama Pengguna</label>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <span id="username">KarinaPutri</span>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <span id="email">KarinaPutri93@gmail.com</span>
+          </div>
+        </div>
+        <button class="logout-button">Logout</button>
+      </div>
+    </section>
+    <!-- section 1 -->
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="childfooter">
+        <h1>Made With Care.</h1>
+        <img
+          src="../img/LandingPage/footer.png"
+          alt="Blood drop icon"
+          height="30"
+        />
+      </div>
+    </footer>
+    <!-- footer -->
+    <script src="../script/utils/drawer.js"></script>
+  </body>
+</html>
