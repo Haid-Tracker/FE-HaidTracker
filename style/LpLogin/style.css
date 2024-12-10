@@ -94,16 +94,15 @@ body {
 /* navbar */
 
 /* profil */
+/* profil */
 .profile-pic {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #ccc;
-  font-size: 14px;
-  color: #fff;
   cursor: pointer;
   margin-left: 20px;
 }
+/* profil */
 /* profil */
 
 /* section 1 */

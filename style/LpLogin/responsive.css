@@ -88,7 +88,7 @@
   }
 }
 
-@media screen and (min-width: 376px) and (max-width: 976px) {
+@media screen and (min-width: 376px) and (max-width: 1106px) {
   .navbar {
     background-color: rgba(255, 255, 255, 0.5);
   }
@@ -167,7 +167,7 @@
   }
 }
 
-@media screen and (min-width: 976px) and (max-width: 1099px) {
+@media screen and (min-width: 1104px) and (max-width: 1099px) {
   #hamburger {
     display: none;
   }
@@ -186,6 +186,12 @@
   }
 }
 /* navbar */
+
+@media screen and (max-width: 1105px) {
+  .profile-pic {
+    margin-left: 65px;
+  }
+}
 
 /* section 1 */
 @media screen and (min-width: 870px) and (max-width: 976px) {
@@ -468,20 +474,3 @@
   }
 }
 /* footer */
-
-/* profil */
-@media screen and (max-width: 976px) {
-  .navbar {
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-
-  .profile-pic {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background-color: #ccc;
-    cursor: pointer;
-    margin-left: 65px;
-  }
-}
-/* profil */

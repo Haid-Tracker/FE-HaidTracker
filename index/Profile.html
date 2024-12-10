@@ -37,7 +37,7 @@
         <div id="drawer">
           <ul class="nav-links">
             <li>
-              <a href="#">Home</a>
+              <a href="LpLogin.html">Home</a>
             </li>
             <li>
               <a href="#">Period</a>
@@ -46,10 +46,15 @@
               <a href="#">Prediction</a>
             </li>
             <div class="user">
-              <a href="#" class="btn">Login</a>
-              <a href="#" class="btn">Sign In</a>
               <i class="fas fa-moon theme-toggle"></i>
             </div>
+            <img
+              alt="Foto profil"
+              class="profile-pic-1"
+              id="profile-pic-1"
+              src="../img/Profile/Contoh Profil.png"
+              onclick="window.location.href='Profile.html'"
+            />
           </ul>
         </div>
 
@@ -69,19 +74,19 @@
     </header>
     <!-- navbar -->
 
-    <!-- section 1 -->
+    <!-- section -->
     <section class="main-content">
       <div class="profile-card">
         <img
           alt="Foto profil"
-          class="profile-pic"
-          id="profile-pic"
+          class="profile-pic-2"
+          id="profile-pic-2"
           src="../img/Profile/Contoh Profil.png"
         />
         <div class="name" id="user-name">Hai, Karina Putri</div>
         <i
           class="fas fa-edit edit-icon"
-          onclick="window.location.href='EditProfile.html'"
+          onclick="window.location.href='DataPengguna.html'"
         ></i>
       </div>
 
@@ -100,10 +105,15 @@
             <span id="email">KarinaPutri93@gmail.com</span>
           </div>
         </div>
-        <button class="logout-button">Logout</button>
+        <button
+          class="logout-button"
+          onclick="window.location.href='LandingPage.html'"
+        >
+          Logout
+        </button>
       </div>
     </section>
-    <!-- section 1 -->
+    <!-- section  -->
 
     <!-- footer -->
     <footer class="footer">

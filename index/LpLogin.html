@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../style/LpLogin/responsive.css" />
     <link rel="stylesheet" href="../style/LpLogin/style.css" />
+    <link rel="stylesheet" href="../style/LpLogin/responsive.css" />
 
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -35,24 +35,26 @@
         <div id="drawer">
           <ul class="nav-links">
             <li>
-              <a href="LandingPage.html">Home</a>
+              <a href="#">Home</a>
             </li>
             <li>
-              <a href="#">Services</a>
+              <a href="#main-content2">Services</a>
             </li>
             <li>
-              <a href="#">About Us</a>
+              <a href="#main-content4">About Us</a>
             </li>
             <div class="user">
-              <a href="#" class="btn">Login</a>
-              <a href="#" class="btn">Sign In</a>
+              <a href="#" class="btn" id="btn-login">Login</a>
+              <a href="#" class="btn" id="btn-signin">Sign In</a>
               <i class="fas fa-moon theme-toggle"></i>
             </div>
-            <div
-              id="profilePic"
+            <img
+              alt="Foto profil"
               class="profile-pic"
+              id="profile-pic"
+              src="../img/Profile/Contoh Profil.png"
               onclick="window.location.href='Profile.html'"
-            ></div>
+            />
           </ul>
         </div>
 
@@ -73,7 +75,7 @@
     <!-- navbar -->
 
     <!-- section 1 -->
-    <section class="main-content1">
+    <section class="main-content1" id="main-content1">
       <div class="container">
         <div class="text-content">
           <h1>Kenali Siklusmu, <span>Jaga</span> Kesehatanmu!</h1>
@@ -95,7 +97,7 @@
     <!-- section 1 -->
 
     <!-- section 2 -->
-    <section class="main-content2">
+    <section class="main-content2" id="main-content2">
       <div class="container2">
         <div class="left">
           Nikmati Fitur <br />
@@ -118,7 +120,7 @@
     <!-- section 2 -->
 
     <!-- section 3 -->
-    <section class="main-content3">
+    <section class="main-content3" id="main-content3">
       <div class="container3">
         <div class="image">
           <img src="../img/LandingPage/Section3(1).png" alt="Gambar Periode" />
@@ -144,7 +146,7 @@
     <!-- section 3 -->
 
     <!-- section 4 -->
-    <section class="main-content4">
+    <section class="main-content4" id="main-content4">
       <div class="container4">
         <h1 class="title">Catat Siklusmu, Prediksi Haid dengan Akurat</h1>
         <p class="description">

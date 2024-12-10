@@ -93,6 +93,16 @@ body {
 
 /* navbar */
 
+/* profil */
+.profile-pic-1 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 20px;
+}
+/* profil */
+
 /* section */
 .main-content {
   height: 80vh;
@@ -110,7 +120,7 @@ body {
   text-align: center;
   position: relative;
 }
-.profile-card img.profile-pic {
+.profile-card img.profile-pic-2 {
   border-radius: 50%;
   width: 100px;
   height: 100px;
