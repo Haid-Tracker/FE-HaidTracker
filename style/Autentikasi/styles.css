@@ -5,12 +5,22 @@ body {
     background-color: #f9f9f9;
 }
 
+.navbartop {
+    background-color: #6b0d0d;
+    padding: 10px 0;
+    position: fixed; /* Perbarui */
+    width: 100%;
+    top: 0;
+    z-index: 9999; /* Perbarui */
+  }
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #fff;
+    text-align: center;
 }
 
 .left,
@@ -19,10 +29,10 @@ body {
     padding: 20px;
 }
 
-.left {
+/* .left {
     text-align: center;
     border-right: 1px solid #ccc;
-}
+} */
 
 .left h1 {
     font-size: 24px;
@@ -70,16 +80,11 @@ body {
 }
 
 .show-password {
-    position: relative;
-    right: 60px;
-    top: 50%;
+    position: absolute;
+    right: 60px; /* Jarak dari sisi kanan input */
+    top: 50%; /* Menempatkan di tengah vertikal */
     transform: translateY(-50%);
     cursor: pointer;
-
-    img{
-        height: 20px;
-        background: transparent;
-    }
 }
 
 .btn {
