@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haid Tracker</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style/Artikel/style.css" />
+    <link rel="stylesheet" href="../style/Artikel/responsive.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="navbartop"></div>
+      <nav class="navbar">
+        <div class="logo">
+          <h1>HAID TRACKER</h1>
+          <img
+            src="../img/LandingPage/noto_drop-of-blood.png"
+            alt="Blood drop icon"
+            height="40"
+            width="40"
+          />
+        </div>
+        <div id="drawer">
+          <ul class="nav-links">
+            <li>
+              <a href="LpLogin.html">Home</a>
+            </li>
+            <li>
+              <a href="#">Notes</a>
+            </li>
+            <div class="user">
+              <i class="fas fa-moon theme-toggle"></i>
+            </div>
+            <img
+              alt="Foto profil"
+              class="profile-pic"
+              id="profile-pic"
+              src="../img/Profile/Contoh Profil.png"
+              onclick="window.location.href='Profile.html'"
+            />
+          </ul>
+        </div>
+
+        <button
+          id="hamburger"
+          class="menu-button"
+          aria-label="Open Navigation Menu"
+        >
+          <img
+            src="https://img.icons8.com/?size=100&id=17551&format=png&color=000000"
+            alt=""
+            height="20"
+            width="20"
+          />
+        </button>
+      </nav>
+    </header>
+    <main class="container">
+      <article>
+        <div class="title" id="title">
+          Mengapa Ketika Haid Beberapa Orang Mengalami Gejala Keram Perut?
+        </div>
+        <div class="content">
+          <img
+            alt="Seorang wanita berbaring di tempat tidur sambil memegang perutnya yang sakit."
+            height="400"
+            src="../img/Artikel/keram 1.png"
+            width="800"
+            id="image"
+          />
+          <div class="date" id="date">Senin, 12 September 2024</div>
+          <h2>Penyebab Kram Perut Saat Menstruasi</h2>
+          <p>
+            Kram perut saat menstruasi umumnya merupakan sesuatu yang wajar. Hal
+            ini disebabkan karena rahim mengalami terlalu banyak prostaglandin
+            ketika menstruasi. Zat ini membuat otot-otot rahim berkontraksi
+            sehingga menyebabkan kram. Kondisi kram perut ini bisa terjadi 1
+            atau 2 hari sebelum menstruasi, lalu berlanjut saat menstruasi
+            hari-hari awal menstruasi. Namun, sering bertambahnya usia atau
+            setelah melahirkan, kram perut dapat semakin berkurang.
+          </p>
+          <p>
+            Selain itu, kram perut saat menstruasi juga dapat disebabkan oleh
+            beberapa penyebab tertentu, seperti:
+          </p>
+          <p>1. Miom</p>
+          <p>
+            Miom adalah benjolan yang tumbuh di dinding rahim. Selain kram perut
+            ketika menstruasi, miom juga menyebabkan perdarahan menstruasi berat
+            saat menstruasi, nyeri punggung bagian bawah, dan nyeri saat
+            berhubungan seksual.
+          </p>
+          <p>2. Endometriosis</p>
+          <p>
+            Adanya jaringan tebal endometrium atau lapisan permukaan rahim
+            tumbuh di bagian tubuh lain dapat menyebabkan kram perut saat
+            menstruasi, nyeri perut bagian bawah, dan menstruasi berkepanjangan.
+          </p>
+          <a class="read-more" id="read-more" href="#"> Selengkapnya ... </a>
+        </div>
+      </article>
+    </main>
+
+    <section class="container-child">
+      <div class="artikel-section">
+        <div class="artikel-title">Artikel Lainnya</div>
+        <div class="artikel-items">
+          <div class="artikel-item">
+            <img
+              alt="Woman experiencing discomfort"
+              height="300"
+              src="../img/Artikel/diare.png"
+              width="200"
+              id="img-1"
+            />
+            <p id="title-1">
+              Kenapa Ketika Haid, Beberapa Perempuan Mengalami Diare?
+            </p>
+          </div>
+          <div class="artikel-item">
+            <img
+              alt="Woman feeling nauseous"
+              height="150"
+              src="/img/Artikel/mual.png"
+              width="200"
+              id="img-2"
+            />
+            <p id="title-2">Mual Saat Haid, Apa Sebabnya?</p>
+          </div>
+          <div class="artikel-item">
+            <img
+              alt="Mood swings during menstruation"
+              height="150"
+              src="/img/Artikel/mood.png"
+              width="200"
+              id="img-3"
+            />
+            <p id="title-3">Banyak Perempuan Mengalami Mood Swing Saat Haid</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="childfooter">
+        <h1>Made With Care.</h1>
+        <img
+          src="../img/LandingPage/footer.png"
+          alt="Blood drop icon"
+          height="30"
+        />
+      </div>
+    </footer>
+    <!-- footer -->
+    <script src="../script/utils/drawer.js"></script>
+  </body>
+</html>
