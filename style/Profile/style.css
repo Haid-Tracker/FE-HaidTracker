@@ -3,6 +3,10 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
 
 /* navbar */
@@ -92,6 +96,10 @@ body {
 }
 
 /* navbar */
+
+.main-content {
+  flex: 1;
+}
 
 /* profil */
 .profile-pic-1 {
