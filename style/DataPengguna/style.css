@@ -5,6 +5,10 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
 
 /* navbar */
@@ -60,12 +64,16 @@ body {
 /* profil */
 
 /* Data Diri */
+#data-diri-section {
+  flex: 1;
+}
 /* container 1 */
 #data-diri {
   display: flex;
   justify-content: center;
   padding-top: 50px;
   flex-wrap: wrap;
+  padding-bottom: 20px;
 }
 
 .input-group span {
@@ -95,19 +103,25 @@ body {
 /* button-edit */
 .edit-button {
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 10px 40px;
   background-color: var(--deep-red);
   color: white;
   border: none;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 17px;
   cursor: pointer;
-  float: inline-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 /* button-edit */
 /* Data Diri */
 
 /* Edit Data Diri */
+#edit-data-diri-section {
+  flex: 1;
+}
 /* container 1 */
 #edit-data-diri {
   display: flex;
@@ -152,79 +166,47 @@ label {
   outline: none;
 }
 
-#date-range {
-  width: 100%;
-  padding: 10px;
-  border: 2px solid var(--deep-red);
-  border-radius: 20px;
-  font-size: 14px;
-  outline: none;
-  margin-bottom: 15px;
-}
-
-/* Menyembunyikan input date */
-.hidden {
-  display: none;
-}
-
-.date-input {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-}
-
 /* container 1 */
 
 /* container 2 */
 .container2 {
   max-width: 400px;
-  padding-top: 90px;
+  padding-top: 115px;
   padding-right: 40px;
   padding-left: 20px;
   width: 100%;
 }
 
-.child-cek {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding-left: 5px;
-}
-
-.child-cek label {
-  font-size: 14px;
-  margin: 0;
-}
-
-.input-groupBox {
-  margin: 0;
-  width: 100%;
-}
-
-.input-groupBox input {
-  width: 100%;
-  padding: 10px;
-  border: 2px solid var(--deep-red);
-  border-radius: 20px;
-  font-size: 14px;
-  outline: none;
-}
 /* container 2 */
 
 /* button-simpan */
 .save-button {
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 10px 40px;
   background-color: var(--deep-red);
   color: white;
   border: none;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 17px;
   cursor: pointer;
-  float: inline-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 /* button-simpan */
 /* Edit Data Diri */
+
+/* UMUM Data Diri dan Edit Data Diri*/
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 10px;
+  margin-top: 40px;
+}
+/* UMUM Data Diri dan Edit Data Diri*/
 
 /* footer */
 .footer {
