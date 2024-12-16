@@ -237,3 +237,30 @@ label {
 }
 
 /* footer */
+
+button.edit-button,
+button.save-button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.edit-button:hover {
+  transform: scale(1.05);
+}
+
+button.save-button:hover {
+  transform: scale(1.05);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"] {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="file"]:focus {
+  border-color: #fff;
+  box-shadow: 0 0 5px rgba(33, 150, 243, 0.7);
+  outline: none;
+}
