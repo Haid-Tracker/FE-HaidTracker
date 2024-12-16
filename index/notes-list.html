@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../style/Notes/style-note.css" />
-    <link rel="stylesheet" href="../style/Notes/responsive.css" />
+    <link rel="stylesheet" href="../style/NotesList/style-note-list.css" />
+    <link rel="stylesheet" href="../style/NotesList/responsive.css" />
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
@@ -75,7 +75,14 @@
         <!-- section 1 -->
         <section>
             <div class="container">
-                <h2>Pilih Tanggal Terakhir Kamu Haid</h2>
+                <div class="header-notes">
+                    <h2>List Catatan Siklus Kamu</h2>
+                    <button class="back-button" onclick="window.location.href='notes.html'"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="m3.343 12l7.071 7.071L9 20.485l-7.778-7.778a1 1 0 0 1 0-1.414L9 3.515l1.414 1.414z" />
+                        </svg></button>
+                </div>
 
                 <div class="tracker">
                     <!-- Kolom Kiri -->
@@ -118,59 +125,17 @@
                         </div>
                     </div>
                     <div class="tracker-buttons">
-                        <button>Simpan Catatan</button>
-                        <button type="submit" onclick="window.location.href='notes-list.html'">Riwayat Catatan</button>
+                        <button onclick="window.location.href='detail-notes.html'">Detail Catatan</button>
                     </div>
                 </div>
             </div>
         </section>
+
+        <div class="show-another">
+            <button id="show-more">Tampilkan Catatan Lainnya</button>
+            <button id="show-less">Lihat Lebih Sedikit</button>
+        </div>
         <!-- section 1 -->
-
-        <!-- section 2 -->
-        <section class="article">
-            <div class="container-article">
-                <div class="section-prediction">
-                    <!-- Kolom Kiri -->
-                    <div class="col-6">
-                        <!-- Konten Baru di Sini -->
-                        <div class="predction-cycle">
-                            <h3>Hasil Prediksi Periode Selanjutnya</h3>
-                            <div class="card">
-                                <div class="card-date">
-                                    <p class="card-date-title">Tanggal</p>
-                                    <p class="card-date-subtitle">Periode Selanjutnya</p>
-                                    <p class="card-date-number">12-25</p>
-                                    <p class="card-date-month">Juli, 2024</p>
-                                </div>
-                                <div class="card-content">
-                                    <h4>Kondisi Kamu</h4>
-                                    <p>
-                                        Untuk kondisi periode haid kamu baik, gejala-gejala yang kamu alami
-                                        saat periode sebelumnya seperti mual, muntah, penurunan nafsu makan,
-                                        dan emosi yang tak terkendali adalah gejala umum yang dialami oleh
-                                        banyak wanita ketika sedang haid.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Kolom Kanan -->
-                    <div class="col-6">
-                        <div class="title-artikel">
-                            <h3>Artikel Pendukung</h3>
-                            <div class="artikel-recomendation">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure ipsum magni porro
-                                consequuntur possimus. Nulla impedit architecto cumque a, debitis consequuntur cum illum
-                                exercitationem numquam repudiandae, nostrum nobis ad suscipit.
-                            </div>
-                            <button type="submit" onclick="window.location.href='artikel.html'">Baca Artikel</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end section 2 -->
     </main>
 
     <!-- footer -->
@@ -182,6 +147,38 @@
     </footer>
     <!-- footer -->
     <script src="../script/utils/drawer.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const showMoreButton = document.getElementById('show-more');
+            const showLessButton = document.getElementById('show-less');
+            const container = document.querySelector('.container');
+
+            if (showMoreButton && showLessButton) {
+                showMoreButton.addEventListener('click', function () {
+                    const trackerElement = document.querySelector('.tracker');
+                    if (trackerElement) {
+                        const newTracker = trackerElement.cloneNode(true);
+                        const textareas = newTracker.querySelectorAll('textarea');
+                        textareas.forEach(textarea => textarea.value = '');
+                        const inputs = newTracker.querySelectorAll('button[type="input"]');
+                        inputs.forEach(input => input.classList.remove('active'));
+                        container.appendChild(newTracker);
+                    }
+                });
+
+                showLessButton.addEventListener('click', function () {
+                    const trackers = container.querySelectorAll('.tracker');
+                    trackers.forEach((tracker, index) => {
+                        if (index > 0) {
+                            tracker.remove();
+                        }
+                    });
+                });
+            } else {
+                console.error("Buttons not found in the DOM.");
+            }
+        });
+    </script>
 </body>
 
 </html>
