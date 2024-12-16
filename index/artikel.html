@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Haid Tracker</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style/Artikel/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style/Artikel/style.css" />
+    <link rel="stylesheet" href="../style/Artikel/responsive.css" />
 </head>
 
 <body>
@@ -24,14 +25,13 @@
                         <a href="LpLogin.html">Home</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">About Us</a>
+                        <a href="detail-notes.html">Notes</a>
                     </li>
                     <div class="user">
                         <i class="fas fa-moon theme-toggle"></i>
                     </div>
+                    <img alt="Foto profil" class="profile-pic" id="profile-pic" src="../img/Profile/Contoh Profil.png"
+                        onclick="window.location.href='Profile.html'" />
                 </ul>
             </div>
 
@@ -43,51 +43,68 @@
     </header>
     <main class="container">
         <article>
-            <h2>Mengapa Ketika Haid Beberapa Orang Mengalami Gejala Keram Perut?</h2>
-            <p>Selasa, 12 September 2024</p>
-            <img src="../img/Artikel/keram 1.png" alt="Ilustrasi kram perut">
-            <h3>Penyebab Kram Perut Saat Menstruasi</h3>
-            <p>Kram perut saat menstruasi umumnya merupakan sesuatu yang wajar. Hal ini disebabkan karena rahim
-                menghasilkan terlalu banyak prostaglandin ketika menstruasi. Zat ini membuat otot-otot rahim
-                berkontraksi sehingga menyebabkan kram. Kondisi kram perut ini bisa terjadi 1 atau 2 hari sebelum
-                menstruasi, lalu berlanjut saat menstruasi hari-hari awal menstruasi. Namun, seiring bertambahnya usia
-                atau setelah melahirkan, kram perut bisa semakin berkurang.</p>
-            <p>Selain itu, kram perut saat menstruasi juga dapat disebabkan oleh beberapa penyakit tertentu, seperti:
-            </p>
-            <ul>
-                <li>Miom</li>
-                <li>Adenomiosis</li>
-            </ul>
-            <p>Miom adalah benjolan yang tumbuh di dinding rahim. Selain kram perut ketika menstruasi, miom juga bisa
-                menyebabkan perdarahan berat saat menstruasi, nyeri punggung bagian bawah, dan nyeri saat berhubungan
-                seksual.</p>
-            <p>Adenomiosis terjadi ketika endometrium atau lapisan permukaan rongga rahim tumbuh ke bagian otot rahim.
-                Kondisi ini menyebabkan kram perut saat menstruasi, perut terasa kembung, dan menstruasi berkepanjangan.
-            </p>
-            <a href="#">Selengkapnya ...</a>
+            <div class="title" id="title">
+                Mengapa Ketika Haid Beberapa Orang Mengalami Gejala Keram Perut?
+            </div>
+            <div class="content">
+                <img alt="Seorang wanita berbaring di tempat tidur sambil memegang perutnya yang sakit." height="400"
+                    src="../img/Artikel/keram 1.png" width="800" id="image" />
+                <div class="date" id="date">Senin, 12 September 2024</div>
+                <h2>Penyebab Kram Perut Saat Menstruasi</h2>
+                <p>
+                    Kram perut saat menstruasi umumnya merupakan sesuatu yang wajar. Hal
+                    ini disebabkan karena rahim mengalami terlalu banyak prostaglandin
+                    ketika menstruasi. Zat ini membuat otot-otot rahim berkontraksi
+                    sehingga menyebabkan kram. Kondisi kram perut ini bisa terjadi 1
+                    atau 2 hari sebelum menstruasi, lalu berlanjut saat menstruasi
+                    hari-hari awal menstruasi. Namun, sering bertambahnya usia atau
+                    setelah melahirkan, kram perut dapat semakin berkurang.
+                </p>
+                <p>
+                    Selain itu, kram perut saat menstruasi juga dapat disebabkan oleh
+                    beberapa penyebab tertentu, seperti:
+                </p>
+                <p>1. Miom</p>
+                <p>
+                    Miom adalah benjolan yang tumbuh di dinding rahim. Selain kram perut
+                    ketika menstruasi, miom juga menyebabkan perdarahan menstruasi berat
+                    saat menstruasi, nyeri punggung bagian bawah, dan nyeri saat
+                    berhubungan seksual.
+                </p>
+                <p>2. Endometriosis</p>
+                <p>
+                    Adanya jaringan tebal endometrium atau lapisan permukaan rahim
+                    tumbuh di bagian tubuh lain dapat menyebabkan kram perut saat
+                    menstruasi, nyeri perut bagian bawah, dan menstruasi berkepanjangan.
+                </p>
+                <a class="read-more" id="read-more" href="#"> Selengkapnya ... </a>
+            </div>
         </article>
-        <section>
-            <div class="other-articles">
-                <div class="content">
-                    <h2>Artikel Lainnya</h2>
-                    <div class="grid">
-                        <div class="article">
-                            <img src="../img/Artikel/diare.png" alt="Ilustrasi diare">
-                            <p>Kram Ketika Haid: Beberapa Cara Mengatasinya</p>
-                        </div>
-                        <div class="article">
-                            <img src="../img/Artikel/mual.png" alt="Ilustrasi mual">
-                            <p>Nyeri Saat Haid, Segera Ketahui Penyebab dan Solusinya</p>
-                        </div>
-                        <div class="article">
-                            <img src="../img/Artikel/mood.png" alt="Ilustrasi mood swing">
-                            <p>Mengatasi Nyeri Haid Secara Alami Tanpa Bahan Kimia</p>
-                        </div>
-                    </div>
+    </main>
+
+    <section class="container-child">
+        <div class="artikel-section">
+            <div class="artikel-title">Artikel Lainnya</div>
+            <div class="artikel-items">
+                <div class="artikel-item">
+                    <img alt="Woman experiencing discomfort" height="300" src="../img/Artikel/diare.png" width="200"
+                        id="img-1" />
+                    <p id="title-1">
+                        Kenapa Ketika Haid, Beberapa Perempuan Mengalami Diare?
+                    </p>
+                </div>
+                <div class="artikel-item">
+                    <img alt="Woman feeling nauseous" height="150" src="/img/Artikel/mual.png" width="200" id="img-2" />
+                    <p id="title-2">Mual Saat Haid, Apa Sebabnya?</p>
+                </div>
+                <div class="artikel-item">
+                    <img alt="Mood swings during menstruation" height="150" src="/img/Artikel/mood.png" width="200"
+                        id="img-3" />
+                    <p id="title-3">Banyak Perempuan Mengalami Mood Swing Saat Haid</p>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
     <!-- footer -->
     <footer class="footer">
         <div class="childfooter">

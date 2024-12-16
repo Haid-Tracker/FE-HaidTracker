@@ -121,41 +121,39 @@ body {
     display: flex;
     align-items: center;
     /* Vertikal sejajar */
-    justify-content: flex-start;
-    /* Konten mulai dari kiri */
-    gap: 10px;
-    /* Jarak antara button dan teks */
+    justify-content: space-between;
+    /* Button di kiri, judul di tengah */
+    position: relative;
+    /* Untuk memposisikan judul di tengah */
+    margin: 20px;
 }
 
 .header-notes h2 {
     margin: 0;
-    /* Hilangkan margin default */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Memastikan judul berada di tengah */
     font-size: 1.5rem;
-    /* Ukuran font */
+    text-wrap: nowrap;
 }
 
 .back-button {
     display: flex;
     align-items: center;
-    /* Posisikan ikon di tengah vertikal */
     justify-content: center;
     border: none;
-    /* Hilangkan border */
     background: none;
-    /* Hilangkan background */
     cursor: pointer;
-    /* Ubah kursor menjadi pointer */
     padding: 5px;
-    /* Beri padding agar lebih nyaman diklik */
 }
 
 .back-button svg {
     width: 24px;
-    /* Ukuran ikon */
     height: 24px;
     color: #333;
-    /* Warna ikon */
 }
+
 
 .tracker {
     display: flex;
@@ -165,6 +163,7 @@ body {
     background-color: #e8e8f9;
     padding: 20px;
     border-radius: 10px;
+    margin-bottom: 50px;
 }
 
 /* Kolom */
@@ -442,6 +441,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 40px;
+    gap: 15px;
     /* Jarak dari elemen atas */
     margin-bottom: 40px;
     width: 100%;
