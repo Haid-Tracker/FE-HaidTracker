@@ -63,25 +63,25 @@ body {
 
 .input-group {
   margin-bottom: 15px;
-  display: flex; /* Gunakan flexbox di sini */
-  align-items: center; /* Untuk menata ikon di dalam input */
+  display: flex;
+  align-items: center;
   position: relative;
   justify-content: center;
 }
 
 .input-group input {
-  width: 100%; /* Lebar 100% untuk mengisi kolom */
+  width: 100%;
   padding: 10px;
   font-size: 16px;
   border: 2px solid #800000;
   border-radius: 20px;
   outline: none;
-  padding-right: 35px; /* Memberi ruang di kanan untuk ikon */
+  padding-right: 35px;
 }
 
 .show-password {
   position: absolute;
-  right: 10px; /* Sesuaikan jarak dari kanan */
+  right: 10px;
   cursor: pointer;
 }
 
