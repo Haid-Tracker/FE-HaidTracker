@@ -25,7 +25,7 @@ body {
   background-color: #fff;
   padding: 10px 20px;
   position: fixed;
-  width: 98%;
+  width: 100%;
   top: 20px;
   /* Perbarui */
   z-index: 9999;
@@ -228,6 +228,18 @@ a:hover {
 .button-container button {
   background-color: #800000;
   color: white;
+}
+
+.btn {
+  background-color: #800000;
+  color: #fff;
+  border: none;
+  padding: 5px 30px;
+  border-radius: 10px;
+  margin-left: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* Responsif */
