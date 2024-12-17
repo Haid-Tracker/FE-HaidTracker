@@ -252,3 +252,30 @@ body {
   transition: color 0.4s ease-in-out;
   text-shadow: 0 0 10px rgba(94, 99, 105, 0.7), 0 0 20px rgba(0, 123, 255, 0.7);
 }
+
+/* Animasi Navigasi Links */
+.nav-links a {
+  position: relative;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #6b0d0d;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #6b0d0d;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}

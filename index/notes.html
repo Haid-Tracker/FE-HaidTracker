@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../style/Notes/style-note.css" />
+    <link rel="stylesheet" href="../style/Notes/responsive.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Haid Tracker</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.15/index.global.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var calendarEl = document.getElementById("calendar");
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: "dayGridMonth",
+          schedulerLicenseKey: "CC-Attribution-NonCommercial-NoDerivatives",
+          selectable: true,
+          select: function (info) {
+            // Menampilkan alert dengan informasi rentang tanggal yang dipilih
+            alert(
+              "Rentang tanggal yang dipilih: " +
+                info.startStr +
+                " hingga " +
+                info.endStr
+            );
+          },
+          handleWindowResize: true, // Agar kalender menyesuaikan ukuran layar
+          expandRows: true,
+        });
+        calendar.render();
+      });
+    </script>
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <header>
+      <div class="navbartop"></div>
+      <nav class="navbar">
+        <div class="logo">
+          <h1>HAID TRACKER</h1>
+          <img
+            src="../img/LandingPage/noto_drop-of-blood.png"
+            alt="Blood drop icon"
+            height="40"
+            width="40"
+          />
+        </div>
+        <div id="drawer">
+          <ul class="nav-links">
+            <li>
+              <a href="LpLogin.html">Home</a>
+            </li>
+            <li>
+              <a href="#service">Services</a>
+            </li>
+            <li>
+              <a href="about.html">About Us</a>
+            </li>
+            <img
+              alt="Foto profil"
+              class="profile-pic"
+              id="profile-pic"
+              src="../img/Profile/Contoh Profil.png"
+              onclick="window.location.href='Profile.html'"
+            />
+          </ul>
+        </div>
+
+        <button
+          id="hamburger"
+          class="menu-button"
+          aria-label="Open Navigation Menu"
+        >
+          <img
+            src="https://img.icons8.com/?size=100&id=17551&format=png&color=000000"
+            alt=""
+            height="20"
+            width="20"
+          />
+        </button>
+      </nav>
+    </header>
+    <!-- navbar -->
+
+    <main>
+      <!-- section 1 -->
+      <section>
+        <div class="container">
+          <h2>Pilih Tanggal Terakhir Kamu Haid</h2>
+
+          <div class="tracker" id="service">
+            <!-- Kolom Kiri -->
+            <div class="col-6">
+              <!-- Konten Baru di Sini -->
+              <h3>Kalender Siklus</h3>
+              <div class="calendar">
+                <div id="calendar"></div>
+              </div>
+            </div>
+
+            <!-- Kolom Kanan -->
+            <div class="col-6">
+              <div class="title-notes">
+                <h3>Catatan Kamu</h3>
+              </div>
+
+              <div class="notes">
+                <h4>Mood</h4>
+                <p>Bagaimana Perasaanmu?</p>
+                <hr />
+                <div class="mood-button">
+                  <button type="input" value="happy" id="mood-1">😊</button>
+                  <button type="input" value="not-happy" id="mood-2">😐</button>
+                  <button type="input" value="tired" id="mood-3">😞</button>
+                  <button type="input" value="sad" id="mood-4">🥲</button>
+                </div>
+                <h4>Gejala</h4>
+                <p>Apa yang kamu rasakan selama haid?</p>
+                <hr />
+                <div class="symptom-button">
+                  <button type="input" value="painful" id="symptom-1">
+                    Nyeri
+                  </button>
+                  <button type="input" value="stomach-cramps" id="symptom-2">
+                    Kram Perut
+                  </button>
+                  <button type="input" value="nauseous" id="symptom-3">
+                    Mual
+                  </button>
+                  <button type="input" value="no-symptoms" id="symptom-4">
+                    Tidak Ada Gejala
+                  </button>
+                </div>
+                <h4>Catatan Lainnya:</h4>
+                <textarea placeholder="Masukkan catatan..."></textarea>
+              </div>
+            </div>
+            <div class="tracker-buttons">
+              <button>Simpan Catatan</button>
+              <button
+                type="submit"
+                onclick="window.location.href='notes-list.html'"
+              >
+                Riwayat Catatan
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section 1 -->
+
+      <!-- section 2 -->
+      <section class="article">
+        <div class="container-article">
+          <div class="section-prediction">
+            <!-- Kolom Kiri -->
+            <div class="col-6">
+              <!-- Konten Baru di Sini -->
+              <div class="predction-cycle">
+                <h3>Hasil Prediksi Periode Selanjutnya</h3>
+                <div class="card">
+                  <div class="card-date">
+                    <p class="card-date-title">Tanggal</p>
+                    <p class="card-date-subtitle">Periode Selanjutnya</p>
+                    <p class="card-date-number">12-25</p>
+                    <p class="card-date-month">Juli, 2024</p>
+                  </div>
+                  <div class="card-content">
+                    <h4>Kondisi Kamu</h4>
+                    <p>
+                      Untuk kondisi periode haid kamu baik, gejala-gejala yang
+                      kamu alami saat periode sebelumnya seperti mual, muntah,
+                      penurunan nafsu makan, dan emosi yang tak terkendali
+                      adalah gejala umum yang dialami oleh banyak wanita ketika
+                      sedang haid.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kolom Kanan -->
+            <div class="col-6">
+              <div class="title-artikel">
+                <h3>Artikel Pendukung</h3>
+                <div class="artikel-recomendation">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
+                  ipsum magni porro consequuntur possimus. Nulla impedit
+                  architecto cumque a, debitis consequuntur cum illum
+                  exercitationem numquam repudiandae, nostrum nobis ad suscipit.
+                </div>
+                <button
+                  type="submit"
+                  onclick="window.location.href='artikel.html'"
+                >
+                  Baca Artikel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section 2 -->
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="childfooter">
+        <h1>Made With Care.</h1>
+        <img
+          src="../img/LandingPage/footer.png"
+          alt="Blood drop icon"
+          height="30"
+        />
+      </div>
+    </footer>
+    <!-- footer -->
+    <script src="../script/utils/drawer.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Elemen yang akan diatur
+        const cardContent = document.querySelector(".card-content");
+        const cardDateFields = document.querySelectorAll(".card-date p"); // Semua elemen teks tanggal
+        const saveButton = document.querySelector(
+          ".tracker-buttons button:first-child"
+        ); // Tombol "Simpan Catatan"
+        const cardDate = document.querySelector(".card"); // Elemen card tempat placeholder
+        const placeholder = document.createElement("div");
+
+        // Tambahkan placeholder
+        placeholder.classList.add("card-placeholder");
+        placeholder.innerHTML =
+          '<i>Anda belum memiliki catatan, <span><a href="#service">buat dahulu.</a></span>';
+        cardDate.appendChild(placeholder);
+
+        // Fungsi untuk memperlihatkan konten dan tanggal
+        saveButton.addEventListener("click", function () {
+          placeholder.style.display = "none"; // Sembunyikan placeholder
+          cardContent.style.display = "block"; // Tampilkan isi card
+          cardDateFields.forEach(
+            (field) => (field.style.visibility = "visible")
+          ); // Tampilkan teks tanggal
+        });
+      });
+    </script>
+  </body>
+</html>

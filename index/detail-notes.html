@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../style/DetailNotes/style.css" />
+    <link rel="stylesheet" href="../style/DetailNotes/responsive.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Haid Tracker</title>
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <header>
+      <div class="navbartop"></div>
+      <nav class="navbar">
+        <div class="logo">
+          <h1>HAID TRACKER</h1>
+          <img
+            src="../img/LandingPage/noto_drop-of-blood.png"
+            alt="Blood drop icon"
+            height="40"
+            width="40"
+          />
+        </div>
+        <div id="drawer">
+          <ul class="nav-links">
+            <li>
+              <a href="LpLogin.html">Home</a>
+            </li>
+            <li>
+              <a href="#service">Services</a>
+            </li>
+            <li>
+              <a href="about.html">About Us</a>
+            </li>
+            <img
+              alt="Foto profil"
+              class="profile-pic"
+              id="profile-pic"
+              src="../img/Profile/Contoh Profil.png"
+              onclick="window.location.href='Profile.html'"
+            />
+          </ul>
+        </div>
+
+        <button
+          id="hamburger"
+          class="menu-button"
+          aria-label="Open Navigation Menu"
+        >
+          <img
+            src="https://img.icons8.com/?size=100&id=17551&format=png&color=000000"
+            alt=""
+            height="20"
+            width="20"
+          />
+        </button>
+      </nav>
+    </header>
+    <!-- navbar -->
+
+    <div class="container">
+      <div class="card" id="service">
+        <div class="card-header">
+          <h3>Detail Catatan Siklus</h3>
+        </div>
+        <div class="card-body">
+          <dl class="details">
+            <div class="row">
+              <dt>Tanggal Mulai</dt>
+              <dd>15 Jun 2024</dd>
+            </div>
+            <div class="row">
+              <dt>Tanggal Selesai</dt>
+              <dd>20 Jun 2024</dd>
+            </div>
+            <div class="row">
+              <dt>Durasi Siklus</dt>
+              <dd>5 hari</dd>
+            </div>
+            <div class="row">
+              <dt>Volume Darah</dt>
+              <dd>Sedang</dd>
+            </div>
+            <div class="row">
+              <dt>Suasana Hati</dt>
+              <dd>Bahagia</dd>
+            </div>
+            <div class="row">
+              <dt>Siklus Teratur</dt>
+              <dd>Ya</dd>
+            </div>
+            <div class="row">
+              <dt>Menggunakan Obat</dt>
+              <dd>Tidak</dd>
+            </div>
+            <div class="row">
+              <dt>Gejala</dt>
+              <dd>
+                <ul>
+                  <li>Pusing</li>
+                  <li>Kram Perut</li>
+                </ul>
+              </dd>
+            </div>
+            <div class="row">
+              <dt>Status</dt>
+              <dd>
+                <span class="badge success">Normal</span>
+              </dd>
+            </div>
+            <div class="row">
+              <dt>Feedback</dt>
+              <dd>Semua baik dan teratur</dd>
+            </div>
+            <div class="row">
+              <dt>Prediksi Siklus Berikutnya</dt>
+              <dd>15 Jul 2024</dd>
+            </div>
+            <div class="row">
+              <dt>Catatan Tambahan</dt>
+              <dd>Tidak ada catatan</dd>
+            </div>
+            <div class="row">
+              <dt>Rekomendasi Artikel</dt>
+              <dd>
+                <a href="artikel.html">1. Pola Makan Sehat [Kesehatan]</a><br />
+                <a href="artikel.html">2. Aktivitas Fisik Ringan [Lifestyle]</a>
+              </dd>
+            </div>
+          </dl>
+          <div class="button-container">
+            <!-- <a href="notes-list.html" class="btn secondary">Kembali</a> -->
+            <!-- <button>Unduh Catatan</button> -->
+            <a
+              href="path_to_file"
+              class="btn"
+              id="btn-download"
+              download="proposed_file_name"
+              >Download</a
+            >
+            <button
+              type="submit"
+              onclick="window.location.href='notes-list.html'"
+            >
+              Kembali
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="childfooter">
+        <h1>Made With Care.</h1>
+        <img
+          src="../img/LandingPage/footer.png"
+          alt="Blood drop icon"
+          height="30"
+        />
+      </div>
+    </footer>
+    <!-- footer -->
+    <script src="../script/utils/drawer.js"></script>
+  </body>
+</html>

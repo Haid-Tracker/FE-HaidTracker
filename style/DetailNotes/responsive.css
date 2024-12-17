@@ -185,118 +185,102 @@
     display: none;
   }
 }
+
 /* navbar */
 
-/* profil */
-@media screen and (max-width: 1107px) {
+@media screen and (max-width: 1105px) {
   .profile-pic {
     margin-left: 65px;
   }
 }
 
-@media screen and (max-width: 977px) {
-  .profile-pic {
-    margin-left: 65px;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .profile-pic {
-    margin-left: 65px;
-  }
-}
-/* profil */
-
-/* article */
 @media (max-width: 768px) {
-  .container {
-    padding: 15px;
-    padding-top: 100px;
+  .details .row {
+    flex-direction: column;
+    margin-bottom: 15px;
   }
 
-  .title {
-    font-size: 26px;
+  .details dt {
+    margin-bottom: 5px;
+  }
+
+  .button-container {
+    flex-direction: row;
+    /* Tombol tetap sejajar secara horizontal */
+    justify-content: center;
+    /* Tombol tetap di tengah */
+  }
+
+  .button-container button {
+    flex: 0 1 auto;
+    /* Menghindari tombol menjadi terlalu lebar */
     text-align: center;
   }
+}
 
-  .content h2 {
+/* Mobile Screens */
+@media (max-width: 480px) {
+  .card-header h3 {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .details dt {
+    font-size: 0.9rem;
+  }
+
+  .details dd {
+    font-size: 0.9rem;
+  }
+
+  .button-container {
+    flex-direction: column;
+    /* Tombol disusun vertikal untuk layar sempit */
+    align-items: center;
+    /* Pusatkan tombol */
+  }
+
+  .button-container button {
+    width: 100%;
+    /* Tombol menyesuaikan lebar container */
+    max-width: 200px;
+    /* Maksimal lebar tombol */
+  }
+}
+
+/* footer */
+@media (max-width: 768px) {
+  .childfooter h1 {
     font-size: 18px;
   }
 
-  .content p {
-    font-size: 14px;
-  }
-
-  .read-more {
-    font-size: 14px;
+  .childfooter img {
+    width: 25px;
   }
 }
 
 @media (max-width: 480px) {
-  .container {
-    padding: 10px;
-    padding-top: 100px;
-  }
-
-  .title {
-    font-size: 22px;
-    text-align: center;
-  }
-
-  .content h2 {
+  .childfooter h1 {
     font-size: 16px;
-  }
-
-  .content p {
-    font-size: 13px;
-    line-height: 1.4;
-  }
-
-  .read-more {
-    font-size: 12px;
-  }
-}
-/* article */
-
-/* Responsif */
-@media (max-width: 768px) {
-  .artikel-section {
-    flex-direction: column;
-  }
-
-  .artikel-title {
     text-align: center;
-    margin-right: 0;
-    margin-bottom: 20px;
-    width: 100%;
   }
 
-  .artikel-items {
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
+  .childfooter img {
+    width: 25px;
+    margin-left: 3px;
+    height: 25px;
   }
 }
 
-@media (max-width: 480px) {
-  .artikel-title {
-    font-size: 20px;
-  }
-
-  .artikel-items {
-    gap: 10px;
-  }
-
-  .artikel-item p {
-    font-size: 12px;
-    padding: 3px;
-  }
-}
+/* footer */
 
 /* profil */
 @media screen and (max-width: 1105px) {
   .profile-pic {
     margin-left: 68px;
-    margin-top: 10px;
   }
 }
