@@ -239,3 +239,133 @@ body {
   width: 30px;
   margin-left: 5px;
 }
+
+/* transisi */
+/* Efek Fade-in Halus untuk Kontainer Utama */
+.container,
+.container-child,
+.footer {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efek Hero Title */
+.title {
+  position: relative;
+  animation: slideInFromLeft 1s ease-in-out;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Efek Hover dan Zoom pada Gambar Artikel */
+.content img,
+.artikel-item img {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  border-radius: 10px;
+}
+
+.content img:hover,
+.artikel-item img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Efek Tombol Selengkapnya */
+.read-more {
+  display: inline-block;
+  padding: 12px 20px;
+  color: white;
+  background-color: #6b0d0d;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.read-more::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  opacity: 0.3;
+  transform: skewX(-45deg);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.read-more:hover::before {
+  left: 100%;
+}
+
+.read-more:hover {
+  background-color: #8c1c1c;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Animasi Navigasi Links */
+.nav-links a {
+  position: relative;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #6b0d0d;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #6b0d0d;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Responsive Animasi */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .content img {
+    transform: none;
+  }
+
+  .read-more:hover {
+    transform: none;
+  }
+}
