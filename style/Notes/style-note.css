@@ -182,6 +182,42 @@ body {
     pointer-events: auto;
 }
 
+.selected-dates-container {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 500px;
+    margin-top: 20px;
+    background-color: #f8f9fa;
+}
+
+.selected-date-item {
+    display: inline-flex;
+    align-items: center;
+    background-color: #e0e0e0;
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.selected-date-item button {
+    background: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.selected-date-item button:hover {
+    background: #495057;
+}
+
 /* Notes di kolom kanan */
 .notes {
     width: 90%;
@@ -394,33 +430,46 @@ body {
 }
 
 .card-placeholder {
-    display: flex; /* Gunakan Flexbox */
-    justify-content: center; /* Tengah horizontal */
-    align-items: center; /* Tengah vertikal */
+    margin-top: 12%;
+    display: flex;
+    /* Gunakan Flexbox */
+    justify-content: center;
+    /* Tengah horizontal */
+    align-items: center;
+    /* Tengah vertikal */
     text-align: center;
     color: gray;
-    flex-wrap: nowrap; /* Pastikan tidak membungkus konten */
+    flex-wrap: nowrap;
+    /* Pastikan tidak membungkus konten */
     padding-left: 5px;
     font-weight: bold;
 }
 
-.card-placeholder span, .card-placeholder a {
-    white-space: nowrap; /* Mencegah teks terputus ke baris baru */
-    display: inline; /* Pastikan elemen tetap inline */
-    margin: 0; /* Hapus margin tambahan */
-    padding: 0; /* Hapus padding tambahan */
-    text-decoration: none; /* Opsional: hilangkan underline */
+.card-placeholder span,
+.card-placeholder a {
+    white-space: nowrap;
+    /* Mencegah teks terputus ke baris baru */
+    display: inline;
+    /* Pastikan elemen tetap inline */
+    margin: 0;
+    /* Hapus margin tambahan */
+    padding: 0;
+    /* Hapus padding tambahan */
+    text-decoration: none;
+    /* Opsional: hilangkan underline */
 }
 
 .card-content {
-    display: none; /* Sembunyikan konten card secara default */
+    display: none;
+    /* Sembunyikan konten card secara default */
 }
 
 .card-date .card-date-title,
 .card-date .card-date-subtitle,
 .card-date .card-date-number,
 .card-date .card-date-month {
-    visibility: hidden; /* Kosongkan teks tanggal */
+    visibility: hidden;
+    /* Kosongkan teks tanggal */
 }
 
 /* Notes di kolom kanan */

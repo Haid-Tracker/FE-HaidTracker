@@ -17,19 +17,27 @@
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.15/index.global.min.js'></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            const notes = JSON.parse(localStorage.getItem('haidTrackerNotes')) ||
+        []; // Ambil data dari localStorage
+
             var calendarEl = document.getElementById('calendar');
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridMonth',
                 schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
-                selectable: true,
-                select: function (info) {
-                    // Menampilkan alert dengan informasi rentang tanggal yang dipilih
-                    alert('Rentang tanggal yang dipilih: ' + info.startStr + ' hingga ' + info
-                        .endStr);
+                selectable: false, // Nonaktifkan fitur pemilihan tanggal baru
+                events: notes.map(note => ({
+                    title: `Mood: ${note.mood}, Gejala: ${note.symptom}`,
+                    start: note.date,
+                    description: note.note,
+                })),
+                eventClick: function (info) {
+                    alert(
+                        `Detail Catatan:\n\n${info.event.title}\nCatatan: ${info.event.extendedProps.description}`);
                 },
-                handleWindowResize: true, // Agar kalender menyesuaikan ukuran layar
+                handleWindowResize: true,
                 expandRows: true
             });
+
             calendar.render();
         });
     </script>

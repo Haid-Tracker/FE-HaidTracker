@@ -17,20 +17,86 @@
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.15/index.global.min.js'></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
+            const selectedDates = []; // Menyimpan tanggal yang dipilih
+            const selectedDatesList = document.getElementById('selected-dates-list');
+            const calendarEl = document.getElementById('calendar');
+
+            const calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridMonth',
                 schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
-                selectable: true,
-                select: function (info) {
-                    // Menampilkan alert dengan informasi rentang tanggal yang dipilih
-                    alert('Rentang tanggal yang dipilih: ' + info.startStr + ' hingga ' + info
-                        .endStr);
-                },
-                handleWindowResize: true, // Agar kalender menyesuaikan ukuran layar
+                dateClick: handleDateClick,
+                handleWindowResize: true,
                 expandRows: true
             });
+
             calendar.render();
+
+            // Fungsi saat tanggal diklik
+            function handleDateClick(info) {
+                const clickedDate = info.dateStr;
+
+                if (selectedDates.length >= 2 && !selectedDates.includes(clickedDate)) {
+                    alert('Anda hanya diperkenankan memilih maksimal dua tanggal siklus.');
+                    return;
+                }
+
+                if (selectedDates.includes(clickedDate)) {
+                    removeDate(clickedDate);
+                } else {
+                    selectedDates.push(clickedDate);
+                }
+
+                updateSelectedDatesDisplay();
+                updateCalendarHighlight();
+            }
+
+            // Update tampilan daftar tanggal
+            function updateSelectedDatesDisplay() {
+                selectedDatesList.innerHTML = "";
+
+                selectedDates.forEach(date => {
+                    const dateItem = document.createElement('div');
+                    dateItem.classList.add('selected-date-item');
+                    dateItem.innerHTML = `
+                        ${formatDate(date)}
+                        <button type="button" onclick="removeDateHandler('${date}')">✖</button>
+                    `;
+                    selectedDatesList.appendChild(dateItem);
+                });
+            }
+
+            // Format tanggal ke format MM/DD/YYYY
+            function formatDate(dateStr) {
+                const date = new Date(dateStr);
+                return `${String(date.getMonth() + 1).padStart(2, '0')}/${String(date.getDate()).padStart(2, '0')}/${date.getFullYear()}`;
+            }
+
+            // Hapus tanggal dari daftar
+            window.removeDateHandler = function (date) {
+                removeDate(date);
+                updateSelectedDatesDisplay();
+                updateCalendarHighlight();
+            };
+
+            function removeDate(date) {
+                const index = selectedDates.indexOf(date);
+                if (index > -1) {
+                    selectedDates.splice(index, 1);
+                }
+            }
+
+            // Highlight tanggal di kalender
+            function updateCalendarHighlight() {
+                calendar.getEvents().forEach(event => event.remove());
+                selectedDates.forEach(date => {
+                    calendar.addEvent({
+                        start: date,
+                        allDay: true,
+                        display: 'background',
+                        color: '#ff9f89'
+                    });
+                });
+            }
         });
     </script>
 </head>
@@ -81,6 +147,10 @@
                         <h3>Kalender Siklus</h3>
                         <div class="calendar">
                             <div id="calendar"></div>
+                        </div>
+                        <div class="selected-dates-container">
+                            <label>Tanggal Siklus Anda</label>
+                            <div id="selected-dates-list"></div>
                         </div>
                     </div>
 
@@ -191,15 +261,73 @@
 
             // Tambahkan placeholder
             placeholder.classList.add('card-placeholder');
-            placeholder.innerHTML = '<i>Anda belum memiliki catatan, <span><a href="#service">buat dahulu.</a></span>';
+            placeholder.innerHTML =
+                '<i>Anda belum memiliki catatan, <span><a href="notes.html">buat dahulu.</a></span>';
             cardDate.appendChild(placeholder);
 
-            // Fungsi untuk memperlihatkan konten dan tanggal
+            // Sembunyikan isi card saat awal
+            placeholder.style.display = 'block';
+            cardContent.style.display = 'none';
+
+            // Fungsi untuk menyimpan data dan menampilkan konten card
             saveButton.addEventListener('click', function () {
+                // Ambil data dari halaman
+                const selectedDates = [...document.querySelectorAll('.selected-date-item')].map(item =>
+                    item.textContent.trim().replace('✖', ''));
+                const moodButtons = document.querySelectorAll('.mood-button button');
+                const symptomButtons = document.querySelectorAll('.symptom-button button');
+                const notes = document.querySelector('textarea').value.trim();
+
+                // Ambil mood yang dipilih
+                let selectedMood = '';
+                moodButtons.forEach(button => {
+                    if (button.classList.contains('active')) {
+                        selectedMood = button.value;
+                    }
+                });
+
+                // Ambil gejala yang dipilih
+                let selectedSymptoms = [];
+                symptomButtons.forEach(button => {
+                    if (button.classList.contains('active')) {
+                        selectedSymptoms.push(button.value);
+                    }
+                });
+
+                // Validasi jika tidak ada data
+                if (!selectedDates.length) {
+                    alert('Pilih setidaknya satu tanggal haid terlebih dahulu.');
+                    return;
+                }
+
+                // Buat objek data untuk disimpan
+                const userData = {
+                    dates: selectedDates,
+                    mood: selectedMood,
+                    symptoms: selectedSymptoms,
+                    notes: notes,
+                };
+
+                // Simpan data ke Local Storage
+                let storedData = JSON.parse(localStorage.getItem('haidTrackerData')) || [];
+                storedData.push(userData);
+                localStorage.setItem('haidTrackerData', JSON.stringify(storedData));
+
+                // Tampilkan konten card
                 placeholder.style.display = 'none'; // Sembunyikan placeholder
                 cardContent.style.display = 'block'; // Tampilkan isi card
                 cardDateFields.forEach(field => field.style.visibility =
                 'visible'); // Tampilkan teks tanggal
+
+                alert('Catatan berhasil disimpan!');
+            });
+
+            // Fungsi untuk menambahkan class active ke tombol yang dipilih
+            const buttons = document.querySelectorAll('.mood-button button, .symptom-button button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function () {
+                    this.classList.toggle('active');
+                });
             });
         });
     </script>
