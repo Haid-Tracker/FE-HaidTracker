@@ -17,6 +17,8 @@ body {
 .container {
   display: flex;
   justify-content: center;
+  padding-left: 50px;
+  padding-right: 40px;
   align-items: center;
   min-height: 100vh;
   background-color: #fff;
