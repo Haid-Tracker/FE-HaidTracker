@@ -430,6 +430,7 @@ body {
 }
 
 .card-placeholder {
+
     margin-top: 12%;
     display: flex;
     /* Gunakan Flexbox */
@@ -441,9 +442,18 @@ body {
     color: gray;
     flex-wrap: nowrap;
     /* Pastikan tidak membungkus konten */
+
+    display: flex; /* Gunakan Flexbox */
+    justify-content: center; /* Tengah horizontal */
+    align-items: center; /* Tengah vertikal */
+    text-align: center;
+    color: gray;
+    flex-wrap: nowrap; /* Pastikan tidak membungkus konten */
+
     padding-left: 5px;
     font-weight: bold;
 }
+
 
 .card-placeholder span,
 .card-placeholder a {
@@ -462,14 +472,30 @@ body {
 .card-content {
     display: none;
     /* Sembunyikan konten card secara default */
+
+.card-placeholder span, .card-placeholder a {
+    white-space: nowrap; /* Mencegah teks terputus ke baris baru */
+    display: inline; /* Pastikan elemen tetap inline */
+    margin: 0; /* Hapus margin tambahan */
+    padding: 0; /* Hapus padding tambahan */
+    text-decoration: none; /* Opsional: hilangkan underline */
+}
+
+.card-content {
+    display: none; /* Sembunyikan konten card secara default */
+
 }
 
 .card-date .card-date-title,
 .card-date .card-date-subtitle,
 .card-date .card-date-number,
 .card-date .card-date-month {
+
     visibility: hidden;
     /* Kosongkan teks tanggal */
+
+    visibility: hidden; /* Kosongkan teks tanggal */
+a
 }
 
 /* Notes di kolom kanan */

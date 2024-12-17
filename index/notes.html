@@ -261,6 +261,7 @@
 
             // Tambahkan placeholder
             placeholder.classList.add('card-placeholder');
+
             placeholder.innerHTML =
                 '<i>Anda belum memiliki catatan, <span><a href="notes.html">buat dahulu.</a></span>';
             cardDate.appendChild(placeholder);
@@ -314,10 +315,18 @@
                 localStorage.setItem('haidTrackerData', JSON.stringify(storedData));
 
                 // Tampilkan konten card
+
+            placeholder.innerHTML = '<i>Anda belum memiliki catatan, <span><a href="#service">buat dahulu.</a></span>';
+            cardDate.appendChild(placeholder);
+
+            // Fungsi untuk memperlihatkan konten dan tanggal
+            saveButton.addEventListener('click', function () {
+
                 placeholder.style.display = 'none'; // Sembunyikan placeholder
                 cardContent.style.display = 'block'; // Tampilkan isi card
                 cardDateFields.forEach(field => field.style.visibility =
                 'visible'); // Tampilkan teks tanggal
+
 
                 alert('Catatan berhasil disimpan!');
             });
@@ -328,6 +337,7 @@
                 button.addEventListener('click', function () {
                     this.classList.toggle('active');
                 });
+
             });
         });
     </script>
