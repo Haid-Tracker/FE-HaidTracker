@@ -47,17 +47,14 @@
             <div id="drawer">
                 <ul class="nav-links">
                     <li>
-                        <a href="#">Home</a>
+                        <a href="LpLogin.html">Home</a>
                     </li>
                     <li>
-                        <a href="#main-content2">Services</a>
+                        <a href="#service">Services</a>
                     </li>
                     <li>
-                        <a href="#main-content4">About Us</a>
+                        <a href="about.html">About Us</a>
                     </li>
-                    <div class="user">
-                        <i class="fas fa-moon theme-toggle"></i>
-                    </div>
                     <img alt="Foto profil" class="profile-pic" id="profile-pic" src="../img/Profile/Contoh Profil.png"
                         onclick="window.location.href='Profile.html'" />
                 </ul>
@@ -77,7 +74,7 @@
             <div class="container">
                 <h2>Pilih Tanggal Terakhir Kamu Haid</h2>
 
-                <div class="tracker">
+                <div class="tracker" id="service">
                     <!-- Kolom Kiri -->
                     <div class="col-6">
                         <!-- Konten Baru di Sini -->
@@ -182,6 +179,31 @@
     </footer>
     <!-- footer -->
     <script src="../script/utils/drawer.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Elemen yang akan diatur
+            const cardContent = document.querySelector('.card-content');
+            const cardDateFields = document.querySelectorAll('.card-date p'); // Semua elemen teks tanggal
+            const saveButton = document.querySelector(
+            '.tracker-buttons button:first-child'); // Tombol "Simpan Catatan"
+            const cardDate = document.querySelector('.card'); // Elemen card tempat placeholder
+            const placeholder = document.createElement('div');
+
+            // Tambahkan placeholder
+            placeholder.classList.add('card-placeholder');
+            placeholder.innerHTML = '<i>Anda belum memiliki catatan, <span><a href="#service">buat dahulu.</a></span>';
+            cardDate.appendChild(placeholder);
+
+            // Fungsi untuk memperlihatkan konten dan tanggal
+            saveButton.addEventListener('click', function () {
+                placeholder.style.display = 'none'; // Sembunyikan placeholder
+                cardContent.style.display = 'block'; // Tampilkan isi card
+                cardDateFields.forEach(field => field.style.visibility =
+                'visible'); // Tampilkan teks tanggal
+            });
+        });
+    </script>
+
 </body>
 
 </html>

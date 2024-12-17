@@ -29,14 +29,11 @@
                         <a href="#">Home</a>
                     </li>
                     <li>
-                        <a href="#main-content2">Services</a>
+                        <a href="#service">Services</a>
                     </li>
                     <li>
-                        <a href="#main-content4">About Us</a>
+                        <a href="about.html">About Us</a>
                     </li>
-                    <div class="user">
-                        <i class="fas fa-moon theme-toggle"></i>
-                    </div>
                     <img alt="Foto profil" class="profile-pic" id="profile-pic" src="../img/Profile/Contoh Profil.png"
                         onclick="window.location.href='Profile.html'" />
                 </ul>
@@ -51,7 +48,7 @@
     <!-- navbar -->
 
     <div class="container">
-        <div class="card">
+        <div class="card" id="service">
             <div class="card-header">
                 <h3>Detail Catatan Siklus</h3>
             </div>
@@ -122,7 +119,8 @@
                 </dl>
                 <div class="button-container">
                     <!-- <a href="notes-list.html" class="btn secondary">Kembali</a> -->
-                        <button>Unduh Catatan</button>
+                        <!-- <button>Unduh Catatan</button> -->
+                        <a href="path_to_file" class="btn" id="btn-download" download="proposed_file_name">Download</a>
                         <button type="submit" onclick="window.location.href='notes-list.html'">Kembali</button>
                 </div>
             </div>

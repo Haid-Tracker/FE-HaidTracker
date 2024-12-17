@@ -25,11 +25,8 @@
                         <a href="LpLogin.html">Home</a>
                     </li>
                     <li>
-                        <a href="detail-notes.html">Notes</a>
+                        <a href="detail-notes.html">Detail Notes</a>
                     </li>
-                    <div class="user">
-                        <i class="fas fa-moon theme-toggle"></i>
-                    </div>
                     <img alt="Foto profil" class="profile-pic" id="profile-pic" src="../img/Profile/Contoh Profil.png"
                         onclick="window.location.href='Profile.html'" />
                 </ul>
@@ -86,22 +83,18 @@
         <div class="artikel-section">
             <div class="artikel-title">Artikel Lainnya</div>
             <div class="artikel-items">
-                <div class="artikel-item">
-                    <img alt="Woman experiencing discomfort" height="300" src="../img/Artikel/diare.png" width="200"
-                        id="img-1" />
-                    <p id="title-1">
-                        Kenapa Ketika Haid, Beberapa Perempuan Mengalami Diare?
-                    </p>
-                </div>
-                <div class="artikel-item">
-                    <img alt="Woman feeling nauseous" height="150" src="/img/Artikel/mual.png" width="200" id="img-2" />
-                    <p id="title-2">Mual Saat Haid, Apa Sebabnya?</p>
-                </div>
-                <div class="artikel-item">
-                    <img alt="Mood swings during menstruation" height="150" src="/img/Artikel/mood.png" width="200"
-                        id="img-3" />
-                    <p id="title-3">Banyak Perempuan Mengalami Mood Swing Saat Haid</p>
-                </div>
+                <a href="#" class="artikel-item">
+                    <img alt="Woman experiencing discomfort" height="300" src="../img/Artikel/diare.png" width="200" />
+                    <p>Kenapa Ketika Haid, Beberapa Perempuan Mengalami Diare?</p>
+                </a>
+                <a href="#" class="artikel-item">
+                    <img alt="Woman feeling nauseous" height="150" src="/img/Artikel/mual.png" width="200" />
+                    <p>Mual Saat Haid, Apa Sebabnya?</p>
+                </a>
+                <a href="#" class="artikel-item">
+                    <img alt="Mood swings during menstruation" height="150" src="/img/Artikel/mood.png" width="200" />
+                    <p>Banyak Perempuan Mengalami Mood Swing Saat Haid</p>
+                </a>
             </div>
         </div>
     </section>
@@ -114,6 +107,31 @@
     </footer>
     <!-- footer -->
     <script src="../script/utils/drawer.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const readMoreBtn = document.getElementById("read-more");
+            const contentText = document.querySelectorAll(".content p");
+
+            let isExpanded = false; // Status awal
+
+            readMoreBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                // Toggle state tampil teks penuh atau tidak
+                isExpanded = !isExpanded;
+
+                if (isExpanded) {
+                    // Tampilkan teks penuh
+                    contentText.forEach(p => p.classList.add("show"));
+                    readMoreBtn.textContent = "Lihat Lebih Sedikit";
+                } else {
+                    // Kembalikan ke teks sedikit
+                    contentText.forEach(p => p.classList.remove("show"));
+                    readMoreBtn.textContent = "Selengkapnya ...";
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
