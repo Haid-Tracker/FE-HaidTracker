@@ -1,8 +1,8 @@
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .container {
     padding-top: 30px;
     padding-left: 30px;
-    padding-right: 50px;
+    padding-right: 30px;
   }
 
   .left,
@@ -45,8 +45,6 @@
 
   .container {
     padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 50px;
   }
 
   .left h1 {
@@ -82,8 +80,6 @@
 @media (max-width: 482px) {
   .container {
     padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 45px;
   }
 
   .btn {

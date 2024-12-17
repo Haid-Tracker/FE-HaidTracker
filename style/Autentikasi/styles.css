@@ -8,10 +8,10 @@ body {
 .navbartop {
   background-color: #6b0d0d;
   padding: 10px 0;
-  position: fixed; /* Perbarui */
+  position: fixed;
   width: 100%;
   top: 0;
-  z-index: 9999; /* Perbarui */
+  z-index: 9999;
 }
 
 .container {
@@ -29,11 +29,6 @@ body {
   flex: 1;
   padding: 20px;
 }
-
-/* .left {
-    text-align: center;
-    border-right: 1px solid #ccc;
-} */
 
 .left h1 {
   font-size: 24px;
@@ -68,23 +63,25 @@ body {
 
 .input-group {
   margin-bottom: 15px;
+  display: flex; /* Gunakan flexbox di sini */
+  align-items: center; /* Untuk menata ikon di dalam input */
   position: relative;
+  justify-content: center;
 }
 
 .input-group input {
-  width: 80%;
+  width: 100%; /* Lebar 100% untuk mengisi kolom */
   padding: 10px;
   font-size: 16px;
   border: 2px solid #800000;
   border-radius: 20px;
   outline: none;
+  padding-right: 35px; /* Memberi ruang di kanan untuk ikon */
 }
 
-.toggle-password {
+.show-password {
   position: absolute;
-  right: 80px;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 10px; /* Sesuaikan jarak dari kanan */
   cursor: pointer;
 }
 
