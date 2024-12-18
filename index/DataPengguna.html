@@ -61,16 +61,6 @@
             <label for="profile-pic">Foto Profil</label>
             <span id="profile-pic-display">Belum ada file yang diunggah</span>
           </div>
-
-          <h2>Data Period</h2>
-          <div class="input-group">
-            <label for="awal-haid">Tanggal awal haid</label>
-            <span id="awal-haid-display">2024 / 09 / 24</span>
-          </div>
-          <div class="input-group">
-            <label for="date-range">Durasi / Panjang Haid</label>
-            <span id="date-range-display">Sep 25 - Oct 24</span>
-          </div>
         </div>
 
         <div class="container2">
@@ -86,17 +76,10 @@
             <label for="tinggi-badan">Tinggi badan</label>
             <span id="tinggi-badan-display">165 cm</span>
           </div>
-          <div class="cek-box">
-            <label>Sedang minum obat tertentu?</label>
-            <div class="child-cek">
-              <span id="obat-status">Ya</span>
-              <span id="obat-name"> Kb </span>
-            </div>
-          </div>
+        </div>
 
-          <!-- button-edit -->
+        <div class="button-container">
           <button class="edit-button" id="edit-button">Edit</button>
-          <!-- button-edit -->
         </div>
       </div>
       <!-- section -->
@@ -141,26 +124,6 @@
             <label for="profile-pic">Foto Profil</label>
             <input type="file" id="profile-pic" />
           </div>
-
-          <h2>Data Period</h2>
-          <div class="input-group">
-            <label for="awal-haid">Tanggal awal haid</label>
-            <input type="date" id="awal-haid" value="2024-09-25" />
-          </div>
-          <div class="input-group-duration" id="input-duration">
-            <label for="date-range">Durasi / Panjang Haid</label>
-
-            <!-- Tampilan hasil rentang -->
-            <div id="date-range" class="date-display" tabindex="0">
-              Sep 25 - Oct 24
-            </div>
-
-            <div class="date-input">
-              <!-- Input tersembunyi -->
-              <input type="date" id="start-date" class="hidden" />
-              <input type="date" id="end-date" class="hidden" />
-            </div>
-          </div>
         </div>
 
         <div class="container2">
@@ -176,22 +139,10 @@
             <label for="Tinggi-badan">Tinggi badan</label>
             <input type="text" id="tinggi-badan" placeholder="Cm" />
           </div>
-          <div class="cek-box">
-            <label>Sedang minum obat tertentu?</label>
-            <div class="child-cek">
-              <input type="checkbox" id="input-iya" />
-              <label for="iya">Ya</label>
-              <input type="checkbox" id="input-tidak" />
-              <label for="tidak">Tidak</label>
-              <div class="input-groupBox">
-                <input type="text" id="nama-obat" placeholder="Obat" />
-              </div>
-            </div>
-          </div>
+        </div>
 
-          <!-- button-simpan -->
+        <div class="button-container">
           <button class="save-button" id="save-button">Simpan</button>
-          <!-- button-simpan -->
         </div>
       </div>
       <!-- section -->
@@ -211,7 +162,6 @@
       </div>
     </footer>
     <!-- footer -->
-    <script src="../script/DataPengguna.js/duration.js"></script>
     <script src="../script/DataPengguna.js/Transition.js"></script>
   </body>
 </html>

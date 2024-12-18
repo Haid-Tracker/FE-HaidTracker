@@ -195,7 +195,6 @@
 }
 
 @media (max-width: 768px) {
-
   .details .row {
     flex-direction: column;
     margin-bottom: 15px;
@@ -221,7 +220,6 @@
 
 /* Mobile Screens */
 @media (max-width: 480px) {
-
   .card-header h3 {
     font-size: 1.2rem;
     padding: 10px;
@@ -254,7 +252,6 @@
   }
 }
 
-
 /* footer */
 @media (max-width: 768px) {
   .childfooter h1 {
@@ -278,5 +275,11 @@
     height: 25px;
   }
 }
-
 /* footer */
+
+/* profil */
+@media screen and (max-width: 1105px) {
+  .profile-pic {
+    margin-left: 68px;
+  }
+}

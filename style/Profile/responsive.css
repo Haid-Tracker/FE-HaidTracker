@@ -178,9 +178,9 @@
 /* navbar */
 
 /* profil */
-@media screen and (max-width: 977px) {
+@media screen and (max-width: 1105px) {
   .profile-pic-1 {
-    margin-left: 65px;
+    margin-left: 67px;
   }
 }
 

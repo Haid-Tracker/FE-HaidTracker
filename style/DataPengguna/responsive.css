@@ -25,11 +25,16 @@
 /* Data Diri */
 @media (max-width: 768px) {
   .edit-button {
-    margin-top: 20px;
-    width: 100%;
-    float: inline-end;
+    margin-top: 10px;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .button-container {
+    padding: 10px 0;
   }
 }
+
 /* Data Diri */
 
 /* Edit diri */
@@ -50,9 +55,9 @@
   }
 
   .save-button {
-    margin-top: 20px;
-    width: 100%;
-    float: inline-end;
+    margin-top: 10px;
+    height: 45px;
+    font-size: 14px;
   }
 }
 
