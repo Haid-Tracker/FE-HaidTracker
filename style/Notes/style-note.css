@@ -113,7 +113,7 @@ body {
   padding-right: 60px;
 
   h2 {
-    text-align: center;
+      text-align: center;
   }
 }
 
@@ -177,45 +177,45 @@ body {
 
 /* Kalender di kolom kanan */
 .calendar {
-    width: 95%;
-    /* Agar sesuai dengan kolom */
-    pointer-events: auto;
+  width: 95%;
+  /* Agar sesuai dengan kolom */
+  pointer-events: auto;
 }
 
 .selected-dates-container {
-    border: 1px solid #e0e0e0;
-    padding: 10px;
-    border-radius: 5px;
-    max-width: 500px;
-    margin-top: 20px;
-    background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 500px;
+  margin-top: 20px;
+  background-color: #f8f9fa;
 }
 
 .selected-date-item {
-    display: inline-flex;
-    align-items: center;
-    background-color: #e0e0e0;
-    margin: 5px;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 14px;
-    color: #333;
+  display: inline-flex;
+  align-items: center;
+  background-color: #e0e0e0;
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #333;
 }
 
 .selected-date-item button {
-    background: #6c757d;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    margin-left: 8px;
-    cursor: pointer;
-    font-size: 12px;
+  background: #6c757d;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  cursor: pointer;
+  font-size: 12px;
 }
 
 .selected-date-item button:hover {
-    background: #495057;
+  background: #495057;
 }
 
 /* Notes di kolom kanan */
@@ -237,27 +237,27 @@ body {
 }
 
 .notes .mood-button #mood-1 {
-  background-color: #f0c452;
+  background-color: #F0C452;
   border-radius: 50%;
-  border: 1px solid #3c3c43;
+  border: 1px solid #3C3C43;
 }
 
 .notes .mood-button #mood-2 {
-  background-color: #3c3c43;
+  background-color: #3C3C43;
   border-radius: 50%;
-  border: 1px solid #3c3c43;
+  border: 1px solid #3C3C43;
 }
 
 .notes .mood-button #mood-3 {
-  background-color: #2f5d88;
+  background-color: #2F5D88;
   border-radius: 50%;
-  border: 1px solid #3c3c43;
+  border: 1px solid #3C3C43;
 }
 
 .notes .mood-button #mood-4 {
-  background-color: #010a4f;
+  background-color: #010A4F;
   border-radius: 50%;
-  border: 1px solid #3c3c43;
+  border: 1px solid #3C3C43;
 }
 
 .notes .symptom-button {
@@ -267,27 +267,27 @@ body {
 .notes .symptom-button #symptom-1 {
   background-color: #999999;
   border-radius: 20px;
-  border: 1px solid #3c3c43;
+  border: 1px solid #3C3C43;
 }
 
 .notes .symptom-button #symptom-2 {
-  background-color: #3c3c43;
+  background-color: #3C3C43;
   border-radius: 20px;
-  color: #ffffff;
-  border: 1px solid #3c3c43;
+  color: #FFFFFF;
+  border: 1px solid #3C3C43;
 }
 
 .notes .symptom-button #symptom-3 {
-  background-color: #3e9c6e;
+  background-color: #3E9C6E;
   border-radius: 20px;
-  color: #ffffff;
-  border: 1px solid #3c3c43;
+  color: #FFFFFF;
+  border: 1px solid #3C3C43;
 }
 
 .notes .symptom-button #symptom-4 {
-  background-color: #edad08;
+  background-color: #EDAD08;
   border-radius: 20px;
-  border: 1px solid #3c3c43;
+  border: 1px solid #3C3C43;
 }
 
 .notes textarea {
@@ -335,14 +335,15 @@ body {
 .container-article {
   width: 100%;
   margin-top: 50px;
+
 }
 
 .section-prediction {
   display: flex;
   flex-wrap: wrap;
-  background-color: #6b1212;
+  background-color: #6B1212;
   padding: 5rem;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 /* Kolom */
@@ -351,6 +352,7 @@ body {
   /* 48% lebar untuk 2 kolom dengan jarak antar kolom */
   min-width: 300px;
   /* Responsif untuk layar kecil */
+
 }
 
 /* Kalender di kolom kanan */
@@ -407,59 +409,67 @@ body {
 
 /* Bagian konten */
 .card-content {
+  padding: 20px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+}
+
 .card-content h4 {
-    margin: 0 0 10px 0;
-    font-size: 18px;
-    color: #333;
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #333;
 }
 
 .card-content p {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
 }
 
 .card-placeholder {
-    margin-top: 12%;
-    display: flex;
-    /* Gunakan Flexbox */
-    justify-content: center;
-    /* Tengah horizontal */
-    align-items: center;
-    /* Tengah vertikal */
-    text-align: center;
-    color: gray;
-    flex-wrap: nowrap;
-    /* Pastikan tidak membungkus konten */
-    padding-left: 5px;
-    font-weight: bold;
+  margin-top: 12%;
+  display: flex;
+  /* Gunakan Flexbox */
+  justify-content: center;
+  /* Tengah horizontal */
+  align-items: center;
+  /* Tengah vertikal */
+  text-align: center;
+  color: gray;
+  flex-wrap: nowrap;
+  /* Pastikan tidak membungkus konten */
+  padding-left: 5px;
+  font-weight: bold;
 }
 
 .card-placeholder span,
 .card-placeholder a {
-    white-space: nowrap;
-    /* Mencegah teks terputus ke baris baru */
-    display: inline;
-    /* Pastikan elemen tetap inline */
-    margin: 0;
-    /* Hapus margin tambahan */
-    padding: 0;
-    /* Hapus padding tambahan */
-    text-decoration: none;
-    /* Opsional: hilangkan underline */
+  white-space: nowrap;
+  /* Mencegah teks terputus ke baris baru */
+  display: inline;
+  /* Pastikan elemen tetap inline */
+  margin: 0;
+  /* Hapus margin tambahan */
+  padding: 0;
+  /* Hapus padding tambahan */
+  text-decoration: none;
+  /* Opsional: hilangkan underline */
 }
 
 .card-content {
-    display: none;
-    /* Sembunyikan konten card secara default */
+  display: none;
+  /* Sembunyikan konten card secara default */
 }
 
 .card-date .card-date-title,
 .card-date .card-date-subtitle,
 .card-date .card-date-number,
 .card-date .card-date-month {
-    visibility: hidden;
-    /* Kosongkan teks tanggal */
+  visibility: hidden;
+  /* Kosongkan teks tanggal */
 }
 
 /* Notes di kolom kanan */
@@ -468,43 +478,43 @@ body {
 }
 
 .title-artikel button {
-    margin-top: 10px;
-    border-radius: 10px;
-    border: none;
-    height: 2.5rem;
-    cursor: pointer;
-    font-weight: 600;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+  height: 2.5rem;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .title-artikel button:first-of-type {
-    margin-top: 20px;
-    background-color: rgba(255, 255, 255, 0.25);
-    /* Putih dengan opasitas 25% */
-    color: #FFFFFF;
-    /* Warna teks tetap solid putih */
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.25);
+  /* Putih dengan opasitas 25% */
+  color: #FFFFFF;
+  /* Warna teks tetap solid putih */
 }
 
 .show-another {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    /* Jarak dari elemen atas */
-    margin-bottom: 40px;
-    width: 100%;
-    /* Pastikan tombol mengambil ruang penuh */
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  /* Jarak dari elemen atas */
+  margin-bottom: 40px;
+  width: 100%;
+  /* Pastikan tombol mengambil ruang penuh */
 }
 
 .show-another button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .show-another button {
-    background-color: #800000;
-    color: white;
+  background-color: #800000;
+  color: white;
 }
 
 /* footer */
@@ -536,8 +546,7 @@ body {
 }
 
 /* footer */
-
-/* Transisi */
+/* transisi */
 /* Menambahkan efek zoom pada tombol dan fokus area */
 button:hover {
   transform: scale(1.1);
@@ -554,6 +563,16 @@ textarea:focus {
   border: 2px solid #6b0d0d;
   box-shadow: 0 0 5px rgba(107, 13, 13, 0.7);
   transition: all 0.3s ease-in-out;
+}
+
+#btn-download {
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+#btn-download:hover {
+  transform: scale(1.1);
 }
 
 /* Animasi Navigasi Links */
