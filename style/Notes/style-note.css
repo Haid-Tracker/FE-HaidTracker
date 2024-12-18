@@ -177,9 +177,45 @@ body {
 
 /* Kalender di kolom kanan */
 .calendar {
-  width: 95%;
-  /* Agar sesuai dengan kolom */
-  pointer-events: auto;
+    width: 95%;
+    /* Agar sesuai dengan kolom */
+    pointer-events: auto;
+}
+
+.selected-dates-container {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 500px;
+    margin-top: 20px;
+    background-color: #f8f9fa;
+}
+
+.selected-date-item {
+    display: inline-flex;
+    align-items: center;
+    background-color: #e0e0e0;
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.selected-date-item button {
+    background: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.selected-date-item button:hover {
+    background: #495057;
 }
 
 /* Notes di kolom kanan */
@@ -371,47 +407,59 @@ body {
 
 /* Bagian konten */
 .card-content {
-  padding: 20px;
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .card-content h4 {
-  margin: 0 0 10px 0;
-  font-size: 18px;
-  color: #333;
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #333;
 }
 
 .card-content p {
-  font-size: 14px;
-  line-height: 1.5;
-  color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
 }
 
-/* Progress bar */
-.progress-bar {
-  background-color: #e6e6e6;
-  border-radius: 5px;
-  height: 10px;
-  width: 100%;
-  margin: 15px 0;
-  position: relative;
-  overflow: hidden;
+.card-placeholder {
+    margin-top: 12%;
+    display: flex;
+    /* Gunakan Flexbox */
+    justify-content: center;
+    /* Tengah horizontal */
+    align-items: center;
+    /* Tengah vertikal */
+    text-align: center;
+    color: gray;
+    flex-wrap: nowrap;
+    /* Pastikan tidak membungkus konten */
+    padding-left: 5px;
+    font-weight: bold;
 }
 
-.progress {
-  background-color: #00aa00;
-  height: 100%;
-  border-radius: 5px;
-  transition: width 0.3s ease-in-out;
+.card-placeholder span,
+.card-placeholder a {
+    white-space: nowrap;
+    /* Mencegah teks terputus ke baris baru */
+    display: inline;
+    /* Pastikan elemen tetap inline */
+    margin: 0;
+    /* Hapus margin tambahan */
+    padding: 0;
+    /* Hapus padding tambahan */
+    text-decoration: none;
+    /* Opsional: hilangkan underline */
 }
 
-.progress-text {
-  font-size: 14px;
-  color: #333;
-  text-align: right;
+.card-content {
+    display: none;
+    /* Sembunyikan konten card secara default */
+}
+
+.card-date .card-date-title,
+.card-date .card-date-subtitle,
+.card-date .card-date-number,
+.card-date .card-date-month {
+    visibility: hidden;
+    /* Kosongkan teks tanggal */
 }
 
 /* Notes di kolom kanan */
@@ -420,43 +468,43 @@ body {
 }
 
 .title-artikel button {
-  margin-top: 10px;
-  border-radius: 10px;
-  border: none;
-  height: 2.5rem;
-  cursor: pointer;
-  font-weight: 600;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    height: 2.5rem;
+    cursor: pointer;
+    font-weight: 600;
 }
 
 .title-artikel button:first-of-type {
-  margin-top: 20px;
-  background-color: rgba(255, 255, 255, 0.25);
-  /* Putih dengan opasitas 25% */
-  color: #ffffff;
-  /* Warna teks tetap solid putih */
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.25);
+    /* Putih dengan opasitas 25% */
+    color: #FFFFFF;
+    /* Warna teks tetap solid putih */
 }
 
 .show-another {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-  /* Jarak dari elemen atas */
-  margin-bottom: 40px;
-  width: 100%;
-  /* Pastikan tombol mengambil ruang penuh */
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    /* Jarak dari elemen atas */
+    margin-bottom: 40px;
+    width: 100%;
+    /* Pastikan tombol mengambil ruang penuh */
 }
 
 .show-another button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .show-another button {
-  background-color: #800000;
-  color: white;
+    background-color: #800000;
+    color: white;
 }
 
 /* footer */
