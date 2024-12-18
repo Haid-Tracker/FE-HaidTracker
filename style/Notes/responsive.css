@@ -240,6 +240,7 @@
 /* profil */
 @media screen and (max-width: 1105px) {
   .profile-pic {
-    margin-left: 68px;
+    margin-left: 72px;
+    margin-top: 5px;
   }
 }

@@ -230,6 +230,18 @@ a:hover {
   color: white;
 }
 
+.btn {
+  background-color: #800000;
+  color: #fff;
+  border: none;
+  padding: 5px 30px;
+  border-radius: 10px;
+  margin-left: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 /* Responsif */
 @media (max-width: 600px) {
   .row {
@@ -277,7 +289,6 @@ a:hover {
   width: 30px;
   margin-left: 5px;
 }
-
 /* footer */
 
 /* download */
@@ -321,3 +332,4 @@ button:hover {
 button:active {
   transform: translateY(0);
 }
+/* footer */

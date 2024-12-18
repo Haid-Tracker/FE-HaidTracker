@@ -188,12 +188,6 @@
 
 /* navbar */
 
-@media screen and (max-width: 1105px) {
-  .profile-pic {
-    margin-left: 65px;
-  }
-}
-
 @media (max-width: 768px) {
   .details .row {
     flex-direction: column;
@@ -275,12 +269,19 @@
     height: 25px;
   }
 }
-
 /* footer */
 
 /* profil */
 @media screen and (max-width: 1105px) {
   .profile-pic {
-    margin-left: 68px;
+    margin-left: 72px;
+    margin-top: 5px;
+  }
+}
+
+/* Container */
+@media screen and (max-width: 1099px) {
+  .container {
+    padding-top: 40px;
   }
 }

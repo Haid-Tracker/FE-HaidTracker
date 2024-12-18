@@ -177,13 +177,6 @@
 }
 /* navbar */
 
-/* profil */
-@media screen and (max-width: 1105px) {
-  .profile-pic-1 {
-    margin-left: 67px;
-  }
-}
-
 @media screen and (max-width: 634px) {
   .profile-card {
     border-radius: 15px;
@@ -208,10 +201,6 @@
 
   .container {
     margin-left: 0;
-  }
-
-  .profile-pic-1 {
-    margin-left: 65px;
   }
 }
 /* profil */
@@ -240,3 +229,11 @@
   }
 }
 /* footer */
+
+/* profil */
+@media screen and (max-width: 1105px) {
+  .profile-pic-1 {
+    margin-left: 72px;
+    margin-top: 5px;
+  }
+}
