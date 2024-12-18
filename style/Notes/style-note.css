@@ -1,0 +1,548 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+/* navbar */
+
+.navbartop {
+    background-color: #6b0d0d;
+    padding: 10px 0;
+    position: fixed;
+    /* Perbarui */
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    /* Perbarui */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    width: 98%;
+    top: 20px;
+    /* Perbarui */
+    z-index: 9999;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 18px;
+    color: black;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    list-style-type: none;
+}
+
+.navbar .nav-links li a {
+    margin: 0 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.navbar .nav-links .btn {
+    background-color: #5d0a0a;
+    color: #fff;
+    border: none;
+    padding: 5px 30px;
+    border-radius: 5px;
+    margin-left: 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navbar .nav-links .btn:hover {
+    background-color: #7a0e0e;
+}
+
+.navbar .nav-links .theme-toggle {
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.menu-button {
+    background-color: #ffffff;
+    margin: 20px;
+}
+
+#hamburger {
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(9, 9, 9, 0.2);
+}
+
+#hamburger.active {
+    background-color: #7a0e0e;
+}
+
+/* navbar */
+
+/* profil */
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+/* profil */
+
+.container {
+    padding-top: 120px;
+    padding-left: 60px;
+    padding-right: 60px;
+
+    h2 {
+        text-align: center;
+    }
+}
+
+.header-notes {
+    display: flex;
+    align-items: center;
+    /* Vertikal sejajar */
+    justify-content: flex-start;
+    /* Konten mulai dari kiri */
+    gap: 10px;
+    /* Jarak antara button dan teks */
+}
+
+.header-notes h2 {
+    margin: 0;
+    /* Hilangkan margin default */
+    font-size: 1.5rem;
+    /* Ukuran font */
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    /* Posisikan ikon di tengah vertikal */
+    justify-content: center;
+    border: none;
+    /* Hilangkan border */
+    background: none;
+    /* Hilangkan background */
+    cursor: pointer;
+    /* Ubah kursor menjadi pointer */
+    padding: 5px;
+    /* Beri padding agar lebih nyaman diklik */
+}
+
+.back-button svg {
+    width: 24px;
+    /* Ukuran ikon */
+    height: 24px;
+    color: #333;
+    /* Warna ikon */
+}
+
+.tracker {
+    display: flex;
+    flex-wrap: wrap;
+    /* Supaya tetap responsif */
+    gap: 20px;
+    background-color: #e8e8f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Kolom */
+.col-6 {
+    flex: 1 1 48%;
+    /* 48% lebar untuk 2 kolom dengan jarak antar kolom */
+    min-width: 300px;
+    /* Responsif untuk layar kecil */
+}
+
+/* Kalender di kolom kanan */
+.calendar {
+    width: 95%;
+    /* Agar sesuai dengan kolom */
+    pointer-events: auto;
+}
+
+.selected-dates-container {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 500px;
+    margin-top: 20px;
+    background-color: #f8f9fa;
+}
+
+.selected-date-item {
+    display: inline-flex;
+    align-items: center;
+    background-color: #e0e0e0;
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.selected-date-item button {
+    background: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.selected-date-item button:hover {
+    background: #495057;
+}
+
+/* Notes di kolom kanan */
+.notes {
+    width: 90%;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.notes p {
+    color: #666666;
+}
+
+.notes .mood-button {
+    margin-bottom: 20px;
+}
+
+.notes .mood-button #mood-1 {
+    background-color: #F0C452;
+    border-radius: 50%;
+    border: 1px solid #3C3C43;
+}
+
+.notes .mood-button #mood-2 {
+    background-color: #3C3C43;
+    border-radius: 50%;
+    border: 1px solid #3C3C43;
+}
+
+.notes .mood-button #mood-3 {
+    background-color: #2F5D88;
+    border-radius: 50%;
+    border: 1px solid #3C3C43;
+}
+
+.notes .mood-button #mood-4 {
+    background-color: #010A4F;
+    border-radius: 50%;
+    border: 1px solid #3C3C43;
+}
+
+.notes .symptom-button {
+    margin-bottom: 20px;
+}
+
+.notes .symptom-button #symptom-1 {
+    background-color: #999999;
+    border-radius: 20px;
+    border: 1px solid #3C3C43;
+}
+
+.notes .symptom-button #symptom-2 {
+    background-color: #3C3C43;
+    border-radius: 20px;
+    color: #FFFFFF;
+    border: 1px solid #3C3C43;
+}
+
+.notes .symptom-button #symptom-3 {
+    background-color: #3E9C6E;
+    border-radius: 20px;
+    color: #FFFFFF;
+    border: 1px solid #3C3C43;
+}
+
+.notes .symptom-button #symptom-4 {
+    background-color: #EDAD08;
+    border-radius: 20px;
+    border: 1px solid #3C3C43;
+}
+
+.notes textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.notes button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tracker-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    /* Jarak antar tombol */
+    margin-top: 20px;
+    /* Jarak dari elemen atas */
+    width: 100%;
+    /* Pastikan tombol mengambil ruang penuh */
+}
+
+.tracker-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tracker-buttons button {
+    background-color: #800000;
+    color: white;
+}
+
+.article {
+    margin-bottom: -20px;
+}
+
+.container-article {
+    width: 100%;
+    margin-top: 50px;
+
+}
+
+.section-prediction {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #6B1212;
+    padding: 5rem;
+    color: #FFFFFF;
+}
+
+/* Kolom */
+.col-6 {
+    flex: 1 1 48%;
+    /* 48% lebar untuk 2 kolom dengan jarak antar kolom */
+    min-width: 300px;
+    /* Responsif untuk layar kecil */
+
+}
+
+/* Kalender di kolom kanan */
+.predction-cycle {
+    width: 90%;
+    /* Agar sesuai dengan kolom */
+}
+
+.card {
+    display: flex;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 600px;
+}
+
+/* Bagian tanggal */
+.card-date {
+    background-color: #e6e6e6;
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-date-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.card-date-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.card-date-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+}
+
+.card-date-month {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Bagian konten */
+.card-content {
+    padding: 20px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+}
+
+.card-content h4 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.card-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.card-placeholder {
+    margin-top: 12%;
+    display: flex;
+    /* Gunakan Flexbox */
+    justify-content: center;
+    /* Tengah horizontal */
+    align-items: center;
+    /* Tengah vertikal */
+    text-align: center;
+    color: gray;
+    flex-wrap: nowrap;
+    /* Pastikan tidak membungkus konten */
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+.card-placeholder span,
+.card-placeholder a {
+    white-space: nowrap;
+    /* Mencegah teks terputus ke baris baru */
+    display: inline;
+    /* Pastikan elemen tetap inline */
+    margin: 0;
+    /* Hapus margin tambahan */
+    padding: 0;
+    /* Hapus padding tambahan */
+    text-decoration: none;
+    /* Opsional: hilangkan underline */
+}
+
+.card-content {
+    display: none;
+    /* Sembunyikan konten card secara default */
+}
+
+.card-date .card-date-title,
+.card-date .card-date-subtitle,
+.card-date .card-date-number,
+.card-date .card-date-month {
+    visibility: hidden;
+    /* Kosongkan teks tanggal */
+}
+
+/* Notes di kolom kanan */
+.title-artikel {
+    width: 100%;
+}
+
+.title-artikel button {
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    height: 2.5rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.title-artikel button:first-of-type {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.25);
+    /* Putih dengan opasitas 25% */
+    color: #FFFFFF;
+    /* Warna teks tetap solid putih */
+}
+
+.show-another {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    /* Jarak dari elemen atas */
+    margin-bottom: 40px;
+    width: 100%;
+    /* Pastikan tombol mengambil ruang penuh */
+}
+
+.show-another button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.show-another button {
+    background-color: #800000;
+    color: white;
+}
+
+/* footer */
+.footer {
+    display: flex;
+    background-color: #5d0a0a;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    flex-direction: row;
+}
+
+.childfooter {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.childfooter h1 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.childfooter img {
+    width: 30px;
+    margin-left: 5px;
+}
+
+/* footer */
